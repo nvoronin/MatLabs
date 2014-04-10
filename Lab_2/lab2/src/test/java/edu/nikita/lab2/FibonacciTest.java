@@ -5,8 +5,9 @@ import junit.framework.TestCase;
 public class FibonacciTest extends TestCase {
 
 	public void testComputeSanity() {
+		Fibonacci f = new Fibonacci();
 		try {
-			if(Fibonacci.Compute(4) == 3)
+			if(f.Compute(4) == 3)
 				return;
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -16,8 +17,9 @@ public class FibonacciTest extends TestCase {
 	}
 	
 	public void testComputeWrongInput() {
+		Fibonacci f = new Fibonacci();
 		try {
-			Fibonacci.Compute(-1);
+			f.Compute(-1);
 		} catch (Exception e) {
 			return;
 		}

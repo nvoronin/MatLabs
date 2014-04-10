@@ -1,17 +1,19 @@
 package edu.nikita.lab2;
-
 import java.util.HashMap;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Fibonacci {
+public class Fibonacci implements IFunction {
 	
 	private static Logger logger = LoggerFactory.getLogger(Fibonacci.class.getName());
 	
 	private static HashMap<Integer,Integer> accumulator = new HashMap<Integer,Integer>();
 	
-	public static Integer Compute(Integer n) throws Exception{
+	/* (non-Javadoc)
+	 * @see edu.nikita.lab2.IFunction#Compute(java.lang.Integer)
+	 */
+	public Integer Compute(Integer n) throws Exception{
 		if (n < 0)
 		{
 			//
