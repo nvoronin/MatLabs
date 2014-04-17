@@ -72,7 +72,7 @@ public class App
     		System.out.println("Meh... " +  func.Compute(num).toString() );
     	}
     	else 
-    		System.out.println("No input defined");
+    		System.out.println("No valid args defined");
     }
 
 	private static CommandLine parseCommandLineArgs(String[] args)
