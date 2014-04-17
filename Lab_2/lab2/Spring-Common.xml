@@ -5,7 +5,7 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
  
 	<bean id="depOwner" class="edu.nikita.lab2.NumberSeries">
-		<property name="func" ref="ModTwo" />
+		<property name="func" ref="Square" />
 	</bean>
  
 	<bean id="ModTwo" class="edu.nikita.lab2.ModTwo" />
