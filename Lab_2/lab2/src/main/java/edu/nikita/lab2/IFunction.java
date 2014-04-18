@@ -3,6 +3,6 @@ package edu.nikita.lab2;
 
 public interface IFunction {
 
-	public abstract Integer Compute(Integer n) throws Exception;
+	public abstract Long Compute(Long n) throws Exception;
 
 }

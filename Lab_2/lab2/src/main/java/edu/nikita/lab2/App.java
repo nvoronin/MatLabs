@@ -66,10 +66,11 @@ public class App
     	//
     	// print result if defined
     	//
+		System.out.println();
     	if (numberAsAString != null){
-    		int num = Integer.parseInt(numberAsAString);
+    		Long num = Long.parseLong(numberAsAString);
     		IFunction func = new Fibonacci();
-    		System.out.println("Meh... " +  func.Compute(num).toString() );
+    		System.out.println("    " +  func.Compute(num).toString() );
     	}
     	else 
     		System.out.println("No valid args defined");
@@ -111,7 +112,12 @@ public class App
 		if(pathToConfig == null || pathToConfig.length() == 0)
 			pathToConfig = "Spring-Common.xml";
 			
-		Resource resource = new FileSystemResource(pathToConfig);
-    	factory = new XmlBeanFactory(resource);
+		try{
+			Resource resource = new FileSystemResource(pathToConfig);
+			factory = new XmlBeanFactory(resource);
+    	}
+		catch(Exception e){
+			System.out.println("Failed to load Spring-Common.xml");
+		}
 	}
 }

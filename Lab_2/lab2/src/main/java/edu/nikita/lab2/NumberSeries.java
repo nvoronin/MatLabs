@@ -20,11 +20,11 @@ public class NumberSeries {
 		System.out.println( "Doge said Wow!" );
         try {
         	IFunction f = getFunc();
-			System.out.println( "1 Doge said " + f.Compute(1).toString() );
-			System.out.println( "2 Doge said " + f.Compute(2).toString() );
-			System.out.println( "3 Doge said " + f.Compute(3).toString() );
-			System.out.println( "4 Doge said " + f.Compute(4).toString() );
-			System.out.println( "0 Doge said " + f.Compute(0).toString() );
+			System.out.println( "1 Doge said " + f.Compute((long)1).toString() );
+			System.out.println( "2 Doge said " + f.Compute((long)2).toString() );
+			System.out.println( "3 Doge said " + f.Compute((long)3).toString() );
+			System.out.println( "4 Doge said " + f.Compute((long)4).toString() );
+			System.out.println( "0 Doge said " + f.Compute((long)0).toString() );
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

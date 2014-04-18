@@ -8,12 +8,12 @@ public class Fibonacci implements IFunction {
 	
 	private static Logger logger = LoggerFactory.getLogger(Fibonacci.class.getName());
 	
-	private static HashMap<Integer,Integer> accumulator = new HashMap<Integer,Integer>();
+	private static HashMap<Long,Long> accumulator = new HashMap<Long,Long>();
 	
 	/* (non-Javadoc)
 	 * @see edu.nikita.lab2.IFunction#Compute(java.lang.Integer)
 	 */
-	public Integer Compute(Integer n) throws Exception{
+	public Long Compute(Long n) throws Exception{
 		if (n < 0)
 		{
 			//
@@ -25,14 +25,14 @@ public class Fibonacci implements IFunction {
 		}
 		else if(n == 0)
 		{
-			return 0;
+			return (long)0;
 		}
 		else if(n == 1)
 		{
-			return 1;
+			return (long)1;
 		}
 		else if (!accumulator.containsKey(n)){
-			int val = Compute(n - 1) + Compute(n - 2);
+			Long val = Compute(n - 1) + Compute(n - 2);
 			accumulator.put(n, val);
 		}
 		return accumulator.get(n);
